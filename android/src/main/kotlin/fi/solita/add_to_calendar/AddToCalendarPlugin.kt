@@ -18,7 +18,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-/** Add2CalendarPlugin */
+/** AddToCalendarPlugin */
 class AddToCalendarPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     /// The MethodChannel that will the communication between Flutter and native Android
     ///
@@ -30,12 +30,12 @@ class AddToCalendarPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         context = flutterPluginBinding.applicationContext
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "add_2_calendar")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "add_to_calendar")
         channel.setMethodCallHandler(this)
     }
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-        if (call.method == "add2Cal") {
+        if (call.method == "addToCal") {
                 val success = insert(call.argument("title")!!,
                         call.argument("desc")!!,
                         call.argument("location")!!,
