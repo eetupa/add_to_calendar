@@ -19,7 +19,7 @@ import java.util.*
 
 
 /** Add2CalendarPlugin */
-class Add2CalendarPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
+class AddToCalendarPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     /// The MethodChannel that will the communication between Flutter and native Android
     ///
     /// This local reference serves to register the plugin with the Flutter Engine and unregister it
