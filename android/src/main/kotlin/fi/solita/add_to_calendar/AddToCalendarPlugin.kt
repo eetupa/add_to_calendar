@@ -30,7 +30,7 @@ class Add2CalendarPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         context = flutterPluginBinding.applicationContext
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "add_to_calendar")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "add_2_calendar")
         channel.setMethodCallHandler(this)
     }
 
