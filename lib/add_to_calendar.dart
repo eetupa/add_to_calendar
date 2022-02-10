@@ -1,12 +1,5 @@
-import 'dart:async';
+library add_to_calendar;
 
-import 'package:flutter/services.dart';
-
-class AddToCalendar {
-  static const MethodChannel _channel = MethodChannel('add_to_calendar');
-
-  static Future<String?> get platformVersion async {
-    final String? version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-}
+export 'package:add_to_calendar/src/add_2_cal.dart';
+export 'package:add_to_calendar/src/model/event.dart';
+export 'package:add_to_calendar/src/model/recurrence.dart';
